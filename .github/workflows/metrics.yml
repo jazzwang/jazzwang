@@ -1,7 +1,10 @@
 name: Metrics
 on:
-  # Schedule daily updates
-  schedule: [{cron: "0 0 * * *"}]
+  # Schedule updates every Sunday at 00:00 UTC
+  # For more information, 
+  # see https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#schedule
+  # reference: https://crontab.guru/#0_0_*_*_0
+  schedule: [{cron: "0 0 * * 0"}]
   # (optional) Run workflow manually
   workflow_dispatch:
   # (optional) Run workflow when pushing on master/main
